@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context=".CargoScanning">
+
+
+    <TableLayout
+        android:id="@+id/Table1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/TVCargoName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".80"
+                android:text="Cargo items" />
+
+            <TextView
+                android:id="@+id/TVCount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text="Units"
+                android:textSize="18sp" />
+
+        </TableRow>
+    </TableLayout>
+
+
+    <ListView
+        android:id="@+id/CargoScannedListView"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@id/Table1" />
+
+
+    <TableLayout
+        android:id="@+id/Table2"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:weightSum="1">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/BackBTN"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".2"
+                android:background="@color/colorPrimaryDark"
+                android:baselineAligned="false"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_action_backicon"
+                app:backgroundTint="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/ScanBTN"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".4"
+                android:background="@color/colorPrimaryDark"
+                android:baselineAligned="false"
+                android:text="Scan"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:theme="@android:style/ButtonBar" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/UpdateBTN"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".2"
+                android:background="@color/colorPrimaryDark"
+                android:baselineAligned="false"
+                android:clickable="true"
+                android:scaleType="center"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:srcCompat="@android:drawable/stat_sys_upload" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/RefreshBTN"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".2"
+                android:background="@color/colorPrimaryDark"
+                android:baselineAligned="false"
+                android:clickable="true"
+                android:scaleType="center"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:srcCompat="@android:drawable/ic_popup_sync" />
+        </TableRow>
+
+
+    </TableLayout>
+</RelativeLayout>

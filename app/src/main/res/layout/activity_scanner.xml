@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScannerActivity">
+    <ListView
+        android:id="@+id/listViewBarcodeData"
+        android:layout_width="368dp"
+        android:layout_height="487dp"
+        android:fadeScrollbars="false"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/BtnSCan"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listViewBarcodeData"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Scan" />
+
+    <Button
+        android:id="@+id/BtnUpdate"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="517dp"
+        android:background="#59cadb"
+        android:text="Update"
+        android:textColor="@color/MaterialGrey"
+        android:textStyle="bold" />
+</RelativeLayout>
